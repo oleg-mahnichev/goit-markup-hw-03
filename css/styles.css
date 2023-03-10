@@ -21,40 +21,66 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--text-color);
 }
-* {
+/* Utillity */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+p {
+  padding-left: 0;
+  margin: 0;
+}
+.link {
   text-decoration: none;
+}
+.list {
   list-style: none;
 }
 .btn {
   cursor: pointer;
 }
-/*------------------------------------HEADER-----------------------------------*/
+.container {
+  max-width: 1128px;
+  padding: 0 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+/**------------------------------------HEADER-----------------------------------*/
+.header {
+  border-bottom: 1px solid yellowgreen;
+  /* #e7e9fc */
+}
 .header-logo {
+  display: flex;
+  margin-right: 76px;
+  align-items: center;
+
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--corporate-color);
 }
-.link {
-  text-decoration: none;
-}
+
 .header-logo-span {
   color: var(--title-text-color);
 }
+
 .header-item {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
-}
-.list {
-  list-style: none;
 }
 .header-item:hover,
 .header-item:focus,
@@ -75,27 +101,76 @@ body {
 .header-adress:active {
   color: var(--hover-link-color);
 }
-/* --------------------------------------------------HERO SECTION */
+.header-container {
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.header-hrefs {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  padding: 24px 0;
+}
+.adress-items {
+  display: flex;
+  gap: 40px;
+  padding: 24px 0;
+}
+
+/* 
+.header-hrefs .item + .item {
+  margin-left: 40px; 
+}
+.adress-items {
+  display: flex;
+  margin-left: auto;
+}
+.adress-items .item + .item {
+  margin-left: 40px;
+} */
+
+/** --------------------------------------------------HERO SECTION */
 .hero-section {
   background-color: var(--hero-background-color);
 }
+.hero-container {
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
+
 .hero-title {
+  margin: 0 auto;
+  max-width: 496px;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--hero-title-text-color);
 }
+
 .hero-btn {
+  display: block;
+  min-width: 169px;
+  min-height: 56px;
+  margin: 48px auto;
   background-color: var(--hero-btn-background);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
+  border-color: transparent;
   color: var(--hero-btn-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 .hero-btn:hover,
 .hero-btn:focus,
@@ -109,6 +184,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  margin-bottom: 8px;
 }
 .about-text-item {
   font-size: 16px;
@@ -116,8 +192,19 @@ body {
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
-/* ------------------------------------------WHAT ARE WE DOING */
+
+.about-us {
+  display: flex;
+  gap: 24px;
+}
+.about-list-wrap {
+  max-width: 264px;
+  /* min-height: 104px; */
+}
+
+/** ------------------------------------------WHAT ARE WE DOING */
 .wawd-title {
+  margin-bottom: 72px;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -125,13 +212,26 @@ body {
   text-transform: capitalize;
   color: var(--title-text-color);
 }
-.wawd=item-img {
+.about-text-item {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
 }
-/* --------------------------------------------OUR TEAM */
+.wawd {
+  display: flex;
+  gap: 24px;
+}
+.wawd-container {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+/** --------------------------------------------OUR TEAM */
 .ourteam-section {
   background-color: var(--ourteam-background);
 }
 .ourteam-title {
+  margin-bottom: 72px;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -139,11 +239,9 @@ body {
   text-transform: capitalize;
   color: var(--title-text-color);
 }
-.ourteam-list {
-}
-.ourteam-item-img {
-}
+
 .ourteam-name-item {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -158,7 +256,23 @@ body {
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
-/* -----------------------------------------------------FOOTER */
+.ourteam-cards {
+  display: flex;
+  gap: 24px;
+  width: calc((100% - 72px) / 4);
+}
+.card-info {
+  width: 264;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+.title-cards-team {
+  width: 232;
+  margin: 32px 16px;
+}
+/** -----------------------------------------------------FOOTER */
 .footer {
   background-color: var(--footer-background);
 }
@@ -173,6 +287,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--corporate-color);
+  margin-bottom: 16px;
 }
 .footer-logo-span {
   color: var(--footer-span-text-color);
@@ -182,8 +297,13 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--footer-text-color);
+  width: 264px;
 }
-/* ---------------------------------PORTFOLIO_HTML--------------------------- */
+.footer-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+/** ---------------------------------PORTFOLIO_PAGE--------------------------- */
 .nav-button {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -203,6 +323,8 @@ body {
   color: var(--nav-btn-text-color);
 }
 .project-title {
+  margin-bottom: 8px;
+  padding-left: 16px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -210,8 +332,33 @@ body {
   color: var(--title-text-color);
 }
 .project-kind {
+  padding-left: 16px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
+}
+.nav-btn-menu {
+  display: flex;
+  gap: 24px;
+  margin-top: 96px;
+  margin-bottom: 72px;
+  border-radius: 4px;
+  justify-content: center;
+}
+.nav-button {
+  padding: 12px 24px;
+}
+.projects-menu {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+.project-item-list {
+  outline: 1px solid #e7e9fc;
+}
+.portfolio-name-wrap {
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
