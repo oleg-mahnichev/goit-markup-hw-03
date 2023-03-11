@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -21,27 +25,32 @@
           <a class="header-logo link" href="./index.html"
             >Web<span class="header-logo-span">Studio</span></a
           >
-          <ul class="header-hrefs list">
-            <li class="item">
-              <a class="header-item link" href="./index.html">Studio</a>
+          <ul class="header-nav-list list">
+            <li class="header-item">
+              <a class="header-item-link link" href="./index.html">Studio</a>
             </li>
-            <li class="item">
-              <a class="header-item link" href="./portfolio.html">Portfolio</a>
+            <li class="header-item">
+              <a class="header-item-link link" href="./portfolio.html"
+                >Portfolio</a
+              >
             </li>
-            <li class="item">
-              <a class="header-item link" href="">Contacts</a>
+            <li class="header-item">
+              <a class="header-item-link link" href="">Contacts</a>
             </li>
           </ul>
         </nav>
-        <address class="adress">
-          <ul class="adress-items list">
-            <li class="item">
-              <a class="header-adress link" href="mailto:info@devstudio.com">
+        <address class="header-contacts">
+          <ul class="header-contacts-list list">
+            <li class="contacts-item">
+              <a
+                class="contacts-item-link link"
+                href="mailto:info@devstudio.com"
+              >
                 info@devstudio.com
               </a>
             </li>
-            <li class="item">
-              <a class="header-adress link" href="tel:+110001111111"
+            <li class="contacts-item">
+              <a class="contacts-item-link link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
@@ -61,7 +70,7 @@
 
       <section>
         <!------------------------------------ABOUT WEBSTUDIO---------------------------------->
-        <h2 hidden>About Webstudio</h2>
+        <h2 class="visually-hidden">About Webstudio</h2>
         <div class="container about-container">
           <ul class="about-us list">
             <li class="about-list-wrap">
@@ -102,7 +111,7 @@
           <ul class="wawd list">
             <li>
               <img
-                class="wawd=item-img"
+                class="wawd-item-img"
                 src="./images/img_1.jpg"
                 alt="Mac"
                 width="360"
@@ -111,7 +120,7 @@
             </li>
             <li>
               <img
-                class="wawd=item-img"
+                class="wawd-item-img"
                 src="./images/img_2.jpg"
                 alt="App"
                 width="360"
@@ -120,7 +129,7 @@
             </li>
             <li>
               <img
-                class="wawd=item-img"
+                class="wawd-item-img"
                 src="./images/img_3.jpg"
                 alt="Sync"
                 width="360"
@@ -132,7 +141,7 @@
       </section>
       <!------------------------------------------OUR TEAM------------------------------------->
       <section class="ourteam-section">
-        <div class="container">
+        <div class="container team-container">
           <h2 class="ourteam-title">Our Team</h2>
           <div class="ourteam-container">
             <ul class="ourteam-cards list">
