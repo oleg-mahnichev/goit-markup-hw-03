@@ -394,14 +394,13 @@ img {
 }
 
 .portfolio-name-wrap {
+  padding-left: 16px;
   padding-top: 32px;
   padding-bottom: 32px;
   border: 1px solid var(--nav-btn-border-color);
   border-top: none;
 }
 .project-title {
-  margin-left: 16px;
-  margin-right: auto;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -409,8 +408,6 @@ img {
   color: var(--title-text-color);
 }
 .project-kind {
-  margin-left: 16px;
-  margin-right: auto;
   margin-top: 8px;
   font-size: 16px;
   line-height: 1.5;
